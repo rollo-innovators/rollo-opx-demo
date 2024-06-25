@@ -6,8 +6,8 @@ import Skeleton from "@/components/ui/skeleton";
 import { useChat } from "@/lib/hooks/use-chat";
 import Message from "@/lib/types";
 import { Camera, Mic, Send } from "lucide-react";
-import { useRef, useState } from "react";
 import Image from "next/image";
+import { useRef, useState } from "react";
 export default function Home() {
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState<Message[]>([]);
@@ -47,11 +47,13 @@ export default function Home() {
     };
 
     return (
-        <main className="flex min-h-screen max-w-[400px] flex-col items-center py-12 mx-auto">
+        <main className="flex max-w-[400px] flex-col items-center py-12 mx-auto">
             <div className="flex flex-col items-center">
-                <h1>John Doe</h1>
+                <Image src={'/manny.png'} width={100} height={100} alt="user image" className="rounded-full" />
+                <h1 className="text-2xl font-bold">Hello, John Doe!</h1>
+                <p className="text-gray-500">My name is Manny, How can I help you today?</p>
             </div>
-            <div className="h-screen w-screen">
+            <div className="h-[600px] md:h-[1000px] w-screen">
                 <div className="flex flex-col justify-center items-end h-full">
                     <div className="flex flex-col w-full h-5/6 bg-white p-4 rounded-lg m-2 overflow-y-auto space-y-5 md:w-6/12 mx-auto">
                         {messages.map((message, index) => (
