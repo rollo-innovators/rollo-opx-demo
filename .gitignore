@@ -6,3 +6,4 @@ frontend/.env
 notebooks
 frontend/.next
 backend
+data
