@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { Button } from './ui/button';
 import { useToast } from './ui/use-toast';
 import Message from '@/lib/types';
+import Image from 'next/image';
 
 const tpActions = [
     'create_sap_ticket',
@@ -63,6 +64,7 @@ const BotMessage: React.FC<{ message: Message }> = ({ message }) => {
 
     return (
         <div className="flex flex-col w-full">
+            <Image src={'/manny.png'} width={100} height={100} alt="user image" className="rounded-full" />
             <div className="bg-gray-100 p-2 rounded-lg mb-2">
                 <ReactMarkdown>{displayedMessage}</ReactMarkdown>
             </div>

@@ -53,7 +53,7 @@ export default function Home() {
                 <h1 className="text-2xl font-bold">Hello, John Doe!</h1>
                 <p className="text-gray-500">My name is Manny, How can I help you today?</p>
             </div>
-            <div className="h-[600px] md:h-[1000px] w-screen">
+            <div className="h-[600px] md:h-[800px] w-screen">
                 <div className="flex flex-col justify-center items-end h-full">
                     <div className="flex flex-col w-full h-5/6 bg-white p-4 rounded-lg m-2 overflow-y-auto space-y-5 md:w-6/12 mx-auto">
                         {messages.map((message, index) => (
