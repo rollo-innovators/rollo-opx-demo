@@ -19,11 +19,11 @@ const BotMessage: React.FC<{ message: Message }> = ({ message }) => {
     const { toast } = useToast();
 
     useEffect(() => {
-        const hasIntermediateSteps = message.intermediate_steps && message.intermediate_steps.length > 0;
-        const firstMessage = hasIntermediateSteps 
-            ? message.intermediate_steps[0].message_log?.[0]?.content || message.content
+        const hasIntermediateSteps = message.intermediate_steps !== undefined && message.intermediate_steps.length > 0;
+        const firstMessage = hasIntermediateSteps
+            ? message.intermediate_steps![0].message_log?.[0]?.content || message.content
             : message.content;
-        const toolOutput = hasIntermediateSteps ? message.intermediate_steps : [];
+        const toolOutput = hasIntermediateSteps ? message.intermediate_steps! : [];
         const finalContent = hasIntermediateSteps ? message.content : '';
 
         const displayMessages = async () => {

@@ -13,7 +13,7 @@ COPY . .
 EXPOSE 3000
 
 # next build
-RUN pnpm run build
+RUN pnpm next build
 
 # next start
 CMD ["pnpm", "run", "start"]
